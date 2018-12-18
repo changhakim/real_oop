@@ -1,0 +1,100 @@
+2018-12-17
+https://ko.wikipedia.org/wiki/%EA%B0%9D%EC%B2%B4_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)
+컴퓨터 과학에서 
+객체 또는 오브젝트(object)는
+ 저장공간에서 할당되어 값을 가진다 && 
+ 식별자에 의해 참조되는 공간
+ 변수, 자료 구조(배열), 함수(ex=scanner.next();) 또는 메소드가 객체가 될 수 있다.
+ 
+ 클래스객체 on디스크 => 클래스
+ 가상객체 on 메모리 => 인스턴스
+ =>변수를 이용해 클래스 객체에 접근 => 리얼월드 객체 = (디스크에 있는 객체)에 접근
+ 
+ 그러나 메모리가 할당되기 전까지 (가상)객체는 존재하지 않는다
+ 객체는 클래스의 인스턴스이다
+ 
+ Bmi(디스크(클래스)) b(메모리(인스턴스)) = new Bmi();
+ 
+ 클래스(real world) 객체는 자료와 그 자료를 다루는 명령의 조합(method)을 포함하여 (디스크상에 존재)
+ 클래스(real world) 객체가 메시지를 받고 자료를 처리하며 메시지를 다른 객체로 보낼 수 있도록 한다. 
+ 가상객체는 메모리상에 존재 쓸때는 (메모리상에 존재하다가 사용이 끝나면 없어진다.)
+ 네이버를 로그인 했을때 로그인을 하는 나 자신은 클래스객체(real world)이고 로그인을 하면서 나의 가상객체가 생성된다.
+ 로그아웃을 하면 다시 사라진다.
+ 
+ 실세계의 유추로 설명하자면, 
+ 만약 어떤 사람이 집에서 살기를 원할 때, 그 집의 청사진(집의 사진)이나 축소 모형 따위는 전혀 필요가 없다. 
+ 필요한 것은 설계에 맞는 실제 집이다. 
+ 이 유추에서 청사진은 클래스를 나타내고 실제 집은 객체를 나타낸다.
+ 
+ 
+ 
+ 
+  a class= fields, methods(area), and constructors
+  
+  
+  
+  public class Bicycle {
+        
+    // the Bicycle class has
+    // three fields(3개의 필드(메서드안에 없기때문에 필드))   메서드안에 있는 변수들을 지역변수라고 부른다
+    public int cadence;(멤버변수)(전역변수)					전역으로 준 멤버변수들은 모든 메서드에 사용될수있고(member method)
+    public int gear;(멤버변수)(전역변수)					지역변수들은 각각의 속해있는 메서드 안(area)에서만 사용된다
+    public int speed;(멤버변수)(전역변수)
+        
+    // the Bicycle class has
+    // one constructor(생성자)
+    public Bicycle(int startCadence, int startSpeed, int startGear) {
+        gear = startGear;
+        cadence = startCadence;
+        speed = startSpeed;
+         }
+        
+    // the Bicycle class has
+    // four methods
+    public void setCadence(int newValue) {
+        cadence = newValue;
+    }
+        
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+        
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+        
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+        
+}
+
+
+
+
+public class CreateObjectDemo {
+
+    public static void main(String[] args) {
+		
+        // Declare and create a point object and two rectangle objects.
+        Point originOne = new Point(23, 94);(new에의해 할당되었으면서 클래스에 의해서 만들어졌기 때문에 객체이다)
+        Rectangle rectOne = new Rectangle(originOne, 100, 200);(new에의해 할당되었으면서 클래스에 의해서 만들어졌기 때문에 객체이다)
+        Rectangle rectTwo = new Rectangle(50, 100)(new에의해 할당되었으면서 클래스에 의해서 만들어졌기 때문에 객체이다)
+        
+        
+        
+        
+        
+         real-world objects  자바의  real world 는 코드이다. 그반대는 예를들어 사용자에게 보여지는 웹페이지등
+         가상객체 -메모리
+      real world객체- 디스크
+      
+      Scanner s = new Scanner(); new 메모리에다가 s 라는 가상의객체를 생성하라
+      							Scanner 는 진짜로 존재하는 realword 객체(클래스객체)
+      s.next()
+      
+      클래스에 아무리 많은 줄이 코딩되어있어도 실제로 메인에 쓰여지는것은 int a로 정의되면 4바이트밖에 할당이 안된다.(메모리)
+      
+      객체지향의 조건 = 상속 은닉화 추상화 다형성
+     oop
+     객체지향프로그래밍은 상속,추상화다.   								
