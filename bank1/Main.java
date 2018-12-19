@@ -21,7 +21,7 @@ public class Main {
 						String ssn=JOptionPane.showInputDialog("주민번호을 입력하세요");
 						 member = new Member(id, name, pass, ssn);
 
-						JOptionPane.showMessageDialog(null,member.membe());
+						JOptionPane.showMessageDialog(null,member.info());
 						break;
 					case "2" : 
 						 account = new Account(0);

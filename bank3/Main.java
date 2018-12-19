@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class Main {
 	public static void main(String[] args) {
+		Member member = null;
+		Account account = null;
 		while(true) {
 			
 			switch(JOptionPane.showInputDialog("[메뉴]/n"
@@ -18,10 +20,15 @@ public class Main {
 				String pass= JOptionPane.showInputDialog("비밀번호을 입력하세요");
 				String ssn= JOptionPane.showInputDialog("주민번호을 입력하세요");
 				
-				Member member = new Member(name, id, pass, ssn);
+				 member = new Member(name, id, pass, ssn);
 				JOptionPane.showMessageDialog(null,String.format("%s",member.member()));
 				break;
-			
+			case "2" : 
+				 account = new Account(0);
+				 JOptionPane.showMessageDialog(null, "계좌가 생성되었습니다.");
+			break;
+			case"3" : 
+				
 			}
 		}
 	}

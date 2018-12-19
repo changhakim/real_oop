@@ -9,8 +9,8 @@ public class Member {
 		this.pass = pass;
 		this.ssn = ssn;
 	}
-	public String membe() {
-		String mem = "";
+	public String info() {
+		String info = "";
 		
 		return String.format("아이디:%s\n"
 							+ "이름%s\n"
